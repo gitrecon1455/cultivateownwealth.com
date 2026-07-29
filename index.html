@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subdomain Takeover Demonstration</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#0f172a;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            text-align:center;
+            padding:20px;
+        }
+
+        .container{
+            max-width:900px;
+        }
+
+        h1{
+            font-size:60px;
+            color:#ef4444;
+            margin-bottom:20px;
+        }
+
+        h2{
+            font-size:32px;
+            margin-bottom:20px;
+        }
+
+        p{
+            font-size:20px;
+            line-height:1.8;
+            color:#cbd5e1;
+            margin-bottom:20px;
+        }
+
+        .box{
+            background:#1e293b;
+            border-left:5px solid #ef4444;
+            padding:20px;
+            border-radius:10px;
+            margin-top:30px;
+            text-align:left;
+        }
+
+        code{
+            color:#22c55e;
+            font-size:18px;
+        }
+
+        .footer{
+            margin-top:40px;
+            color:#94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>⚠ Subdomain Takeover</h1>
+
+    <h2>This Subdomain Is Controlled By An External Party</h2>
+
+    <p>
+        This page demonstrates the impact of a Subdomain Takeover vulnerability.
+        The attacker does <b>not own the parent domain</b> but is able to host
+        arbitrary content on this trusted subdomain.
+    </p>
+
+    <div class="box">
+        <p>
+            <b>Impact:</b><br><br>
+
+            As an attacker, I can host any content on this subdomain even though
+            I never purchased or owned the domain.
+        </p>
+
+        <p>
+            This may allow:
+        </p>
+
+        <ul style="padding-left:25px;line-height:2;">
+            <li>Phishing Pages</li>
+            <li>Fake Login Portals</li>
+            <li>Malware Distribution</li>
+            <li>Brand Impersonation</li>
+            <li>Social Engineering Attacks</li>
+            <li>Hosting Arbitrary Content</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <code>
+            Attacker Does Not Own Domain<br>
+            +<br>
+            Dangling DNS Record<br>
+            +<br>
+            Claimable Third-Party Service<br>
+            =<br>
+            Subdomain Takeover
+        </code>
+    </div>
+
+    <div class="footer">
+        Security Research Demonstration Only
+    </div>
+
+</div>
+
+</body>
+</html>
